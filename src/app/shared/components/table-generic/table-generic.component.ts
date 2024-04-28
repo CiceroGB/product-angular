@@ -10,6 +10,7 @@ import { MatPaginator } from '@angular/material/paginator';
 })
 export class TableGenericComponent<T> implements AfterViewInit {
   private _data: T[] = [];
+ searchValue: string = '';
 
   @Input() set data(value: T[]) {
     this._data = value;
@@ -33,6 +34,10 @@ export class TableGenericComponent<T> implements AfterViewInit {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
     this.dataSource.data = this._data;  // Make sure data is available once view is initialized
+  }
+
+  applyFilter(): void {
+    this.dataSource.filter = this.searchValue.trim().toLowerCase();
   }
 
   onEdit(item: T): void {
