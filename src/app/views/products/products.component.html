@@ -1,0 +1,14 @@
+<app-products-list [products]="products"  ></app-products-list>
+
+<app-products-table></app-products-table>
+
+<h1>Generica</h1>
+
+<app-table-generic [data]="products" [displayedColumns]="['id', 'name', 'price', 'actions']" [columnDefinitions]="[
+  { def: 'id', header: 'ID' },
+  { def: 'name', header: 'Name' },
+  { def: 'price', header: 'Price' },
+]"
+(edit)="editProduct($event)"
+(delete)="deleteProduct($event)"
+></app-table-generic>

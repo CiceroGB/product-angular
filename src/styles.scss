@@ -1,0 +1,21 @@
+@import '~@angular/material/theming';
+
+// Inclui as funções necessárias para criar um tema
+@include mat-core();
+
+// Define as paletas de cores para o tema
+$blue-primary: mat-palette($mat-blue, 500);
+$blue-accent: mat-palette($mat-blue, A200, A100, A400);
+$blue-warn: mat-palette($mat-red);
+
+// Cria o tema incluindo as paletas
+$theme: mat-light-theme((
+  color: (
+    primary: $blue-primary,
+    accent: $blue-accent,
+    warn: $blue-warn,
+  )
+));
+
+// Inclui todos os componentes do Material com o tema
+@include angular-material-theme($theme);
