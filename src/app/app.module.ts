@@ -28,6 +28,7 @@ import { ProductsTableComponent } from './views/products/components/products-tab
 import { TableGenericComponent } from './shared/components/table-generic/table-generic.component';
 import { ProductsListComponent } from './views/products/components/products-list/products-list.component';
 import { ListSortableComponent } from './shared/components/list-sortable/list-sortable.component';
+import { EditProductModalComponent } from './views/products/components/edit-product-modal/edit-product-modal.component';
 
 
 
@@ -36,7 +37,7 @@ registerLocaleData(localePt);
 
 
 @NgModule({
-  declarations: [AppComponent, ProductComponent, ProductFormComponent, ProductAddComponent, ProductEditComponent, ProductsComponent, ProductsTableComponent, TableGenericComponent, ProductsListComponent, ListSortableComponent],
+  declarations: [AppComponent, ProductComponent, ProductFormComponent, ProductAddComponent, ProductEditComponent, ProductsComponent, ProductsTableComponent, TableGenericComponent, ProductsListComponent, ListSortableComponent, EditProductModalComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

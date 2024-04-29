@@ -18,10 +18,11 @@ export class ProductFormComponent implements OnInit {
 
   productForm!: FormGroup;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder) {
+    this.initializeForm();
+  }
 
   ngOnInit(): void {
-    this.initializeForm();
   }
 
   initializeForm(): void {
@@ -45,7 +46,11 @@ export class ProductFormComponent implements OnInit {
   onSubmit(): void {
     if (this.productForm.valid) {
       const formValue = this.productForm.value;
-      this.saveProduct.emit(formValue);
+      const formattedProduct = {
+        ...formValue,
+        price: formValue.price.toString().replace(',', '.'),
+      };
+      this.saveProduct.emit(formattedProduct);
     }
   }
 }

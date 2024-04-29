@@ -12,7 +12,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 // importar outros módulos do Material aqui
 
@@ -33,6 +35,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatSnackBarModule,
     DragDropModule,
     BrowserAnimationsModule,
+    MatDialogModule,
     // outros módulos do Material aqui
   ],
   exports: [
@@ -49,6 +52,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatSnackBarModule,
     DragDropModule,
     BrowserAnimationsModule,
+    MatDialogModule,
 
     // exportar os módulos do Material para uso em outros lugares
   ]
