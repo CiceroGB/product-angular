@@ -1,0 +1,17 @@
+<!-- <div cdkDropList class="example-list" (cdkDropListDropped)="onDrop($event)">
+  <div class="example-box" *ngFor="let item of items" cdkDrag>{{ item.title }}</div>
+</div> -->
+
+<div cdkDropList class="example-list" (cdkDropListDropped)="onDrop($event)">
+  <div class="example-box" *ngFor="let item of items" cdkDrag>
+
+    <div class="item-content">
+      <div *ngFor="let key of objectKeys(item)">
+        {{ key }}: {{ item[key] }}
+      </div>
+    </div>
+    <span class="drag-icon" cdkDragHandle>
+      <mat-icon>reorder</mat-icon>
+    </span>
+  </div>
+</div>

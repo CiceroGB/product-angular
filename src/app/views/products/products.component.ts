@@ -36,4 +36,8 @@ export class ProductsComponent implements OnInit {
     console.log(JSON.stringify(product));
     this.notificationService.success('Dados deletados!');
   }
+
+  handleListChange(updatedList: any[]) {
+    console.log('Itens atualizados:', updatedList);
+  }
 }

@@ -12,3 +12,7 @@
 (edit)="editProduct($event)"
 (delete)="deleteProduct($event)"
 ></app-table-generic>
+
+<h1> Sortable</h1>
+<app-list-sortable [items]="products" (listChanged)="handleListChange($event)"></app-list-sortable>
+
