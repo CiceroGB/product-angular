@@ -50,7 +50,7 @@ export class ProductsListComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe((result) => {
-      console.log('The dialog was closed', JSON.stringify);
+      console.log('The dialog was closed', JSON.stringify(result));
     });
   }
 }
